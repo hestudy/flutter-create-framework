@@ -10,5 +10,7 @@
   "edit_data": "修改数据",
   "username_warning": "请输入用户名",
   "phone_warning": "请输入手机号",
-  "address_warning": "请输入地址"
+  "address_warning": "请输入地址",
+  "email": "邮箱",
+  "mock_message": "此处数据并非请求获取，而是设置了mock后，拦截并返回设置好的数据"
 }

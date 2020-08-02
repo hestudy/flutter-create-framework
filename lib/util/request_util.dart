@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_create_framework/mock/mock.dart';
 
 class RequestUtil {
   Dio init() {
@@ -9,7 +10,12 @@ class RequestUtil {
     dio.interceptors.add(InterceptorsWrapper(
         onRequest: (RequestOptions options) async {
           // 在请求被发送之前做一些事情
-          return options; //continue
+          Map mockResult = Mock().MockServer(options);
+          if(mockResult["match"]){
+            return dio.resolve(mockResult["response"]);
+          }else{
+            return options; //continue
+          }
           // 如果你想完成请求并返回一些自定义数据，可以返回一个`Response`对象或返回`dio.resolve(data)`。
           // 这样请求将会被终止，上层then会被调用，then中返回的数据将是你的自定义数据data.
           //
@@ -18,7 +24,7 @@ class RequestUtil {
         },
         onResponse: (Response response) async {
           // 在返回响应数据之前做一些预处理
-          return response.data; // continue
+          return response; // continue
         },
         onError: (DioError e) async {
           // 当请求失败时做一些预处理

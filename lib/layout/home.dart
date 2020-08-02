@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
             Navigator.of(context).pushNamed("/stateManage");
           }),
           ListItemButton(text: S.of(context).mock, onTap: (){
-            UserInfoApi().UserInfo();
+            Navigator.of(context).pushNamed("/mockRequest");
           })
         ],
       ),

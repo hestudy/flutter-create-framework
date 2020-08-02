@@ -83,30 +83,30 @@ class S {
     );
   }
 
-  /// `username`
+  /// `Username`
   String get username {
     return Intl.message(
-      'username',
+      'Username',
       name: 'username',
       desc: '',
       args: [],
     );
   }
 
-  /// `phone`
+  /// `Phone`
   String get phone {
     return Intl.message(
-      'phone',
+      'Phone',
       name: 'phone',
       desc: '',
       args: [],
     );
   }
 
-  /// `address`
+  /// `Address`
   String get address {
     return Intl.message(
-      'address',
+      'Address',
       name: 'address',
       desc: '',
       args: [],
@@ -148,6 +148,26 @@ class S {
     return Intl.message(
       'Please enter the address',
       name: 'address_warning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here, the data is not requested, but after the mock is set up, the data is intercepted and returned`
+  String get mock_message {
+    return Intl.message(
+      'Here, the data is not requested, but after the mock is set up, the data is intercepted and returned',
+      name: 'mock_message',
       desc: '',
       args: [],
     );
