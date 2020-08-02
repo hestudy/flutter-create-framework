@@ -21,8 +21,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "address" : MessageLookupByLibrary.simpleMessage("地址"),
+    "address_warning" : MessageLookupByLibrary.simpleMessage("请输入地址"),
     "app_name" : MessageLookupByLibrary.simpleMessage("Flutter快速搭建框架"),
     "change_language" : MessageLookupByLibrary.simpleMessage("切换语言"),
-    "home_title" : MessageLookupByLibrary.simpleMessage("示例")
+    "edit_data" : MessageLookupByLibrary.simpleMessage("修改数据"),
+    "home_title" : MessageLookupByLibrary.simpleMessage("示例"),
+    "mock" : MessageLookupByLibrary.simpleMessage("mock请求"),
+    "phone" : MessageLookupByLibrary.simpleMessage("手机号"),
+    "phone_warning" : MessageLookupByLibrary.simpleMessage("请输入手机号"),
+    "state_manage" : MessageLookupByLibrary.simpleMessage("状态管理"),
+    "username" : MessageLookupByLibrary.simpleMessage("用户名"),
+    "username_warning" : MessageLookupByLibrary.simpleMessage("请输入用户名")
   };
 }

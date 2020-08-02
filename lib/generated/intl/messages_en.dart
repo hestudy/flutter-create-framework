@@ -21,8 +21,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "address" : MessageLookupByLibrary.simpleMessage("address"),
+    "address_warning" : MessageLookupByLibrary.simpleMessage("Please enter the address"),
     "app_name" : MessageLookupByLibrary.simpleMessage("FlutterCreateFrameWork"),
     "change_language" : MessageLookupByLibrary.simpleMessage("switch the language"),
-    "home_title" : MessageLookupByLibrary.simpleMessage("example")
+    "edit_data" : MessageLookupByLibrary.simpleMessage("Modify the data"),
+    "home_title" : MessageLookupByLibrary.simpleMessage("example"),
+    "mock" : MessageLookupByLibrary.simpleMessage("mock request"),
+    "phone" : MessageLookupByLibrary.simpleMessage("phone"),
+    "phone_warning" : MessageLookupByLibrary.simpleMessage("Please enter your cell phone number"),
+    "state_manage" : MessageLookupByLibrary.simpleMessage("State managemen"),
+    "username" : MessageLookupByLibrary.simpleMessage("username"),
+    "username_warning" : MessageLookupByLibrary.simpleMessage("Please enter the user name")
   };
 }

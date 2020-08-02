@@ -1,4 +1,6 @@
 import 'package:flutter_create_framework/layout/home.dart';
+import 'package:flutter_create_framework/layout/stateManage/edit_state_manage.dart';
+import 'package:flutter_create_framework/layout/stateManage/state_manage.dart';
 import 'package:flutter_create_framework/view/change_language_view.dart';
 
 List<Map<String,dynamic>> Routes(){
@@ -10,6 +12,14 @@ List<Map<String,dynamic>> Routes(){
     {
       "path":"/changeLanguage",
       "view":ChangeLanguage(),
+    },
+    {
+      "path":"/stateManage",
+      "view":StateManage()
+    },
+    {
+      "path":"/editStateManage",
+      "view":EditStateManage()
     }
   ];
 }

@@ -7,7 +7,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:bot_toast/bot_toast.dart';
 
-void main() {
+void main(){
   runApp(
     MultiProvider(providers: [
       ChangeNotifierProvider(create: (_)=>UserProvider())

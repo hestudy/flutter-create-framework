@@ -62,6 +62,96 @@ class S {
       args: [],
     );
   }
+
+  /// `State managemen`
+  String get state_manage {
+    return Intl.message(
+      'State managemen',
+      name: 'state_manage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `mock request`
+  String get mock {
+    return Intl.message(
+      'mock request',
+      name: 'mock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `username`
+  String get username {
+    return Intl.message(
+      'username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `phone`
+  String get phone {
+    return Intl.message(
+      'phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `address`
+  String get address {
+    return Intl.message(
+      'address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Modify the data`
+  String get edit_data {
+    return Intl.message(
+      'Modify the data',
+      name: 'edit_data',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the user name`
+  String get username_warning {
+    return Intl.message(
+      'Please enter the user name',
+      name: 'username_warning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your cell phone number`
+  String get phone_warning {
+    return Intl.message(
+      'Please enter your cell phone number',
+      name: 'phone_warning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the address`
+  String get address_warning {
+    return Intl.message(
+      'Please enter the address',
+      name: 'address_warning',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
