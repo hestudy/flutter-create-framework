@@ -1,18 +1,18 @@
-# 正在开发中
+# 关于项目
 
-# flutter_create_framework
+本项目是一个Flutter应用的快速搭建框架，旨在为开发者提供一个高效，方便的开发环境
 
-A new Flutter project.
+## 项目特点
 
-## Getting Started
+基于实际的开发需求，本项目提供了：
 
-This project is a starting point for a Flutter application.
+- [x] 本地的mock服务
+- [x] 状态管理
+- [x] 封装的dio工具
+- [x] 封装的router工具
+- [x] 国际化
+- [ ] ......
 
-A few resources to get you started if this is your first Flutter project:
+## 项目文档
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+待编写
