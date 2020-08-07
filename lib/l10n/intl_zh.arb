@@ -1,5 +1,16 @@
 {
   "app_name": "Flutter快速搭建框架",
   "home_title": "示例",
-  "change_language": "切换语言"
+  "change_language": "切换语言",
+  "state_manage": "状态管理",
+  "mock": "mock请求",
+  "username": "用户名",
+  "phone": "手机号",
+  "address": "地址",
+  "edit_data": "修改数据",
+  "username_warning": "请输入用户名",
+  "phone_warning": "请输入手机号",
+  "address_warning": "请输入地址",
+  "email": "邮箱",
+  "mock_message": "此处数据并非请求获取，而是设置了mock后，拦截并返回设置好的数据"
 }

@@ -1,26 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_create_framework/api/user_info_api.dart';
+import 'package:flutter_create_framework/compent/list_item_button.dart';
 import 'package:flutter_create_framework/generated/l10n.dart';
+import 'package:flutter_create_framework/util/location_storge_util.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   @override
-  _HomeState createState() => _HomeState();
-}
+  Widget build(BuildContext context){
 
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
+    initLanguage()async{
+      String language = await LocationStrogeUtil().get("language");
+      if(language==null){
+        await LocationStrogeUtil().set("language", "zh");
+        S.load(Locale("zh"));
+      }else{
+        S.load(Locale(language));
+      }
+    }
+
+    initLanguage();
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).home_title),
         actions: <Widget>[
           FlatButton(onPressed: (){
             Navigator.of(context).pushReplacementNamed("/changeLanguage");
-          }, child: Text(S.of(context).change_language))
+          }, child: Text(S.of(context).change_language)),
+        ],
+      ),
+      body: ListView(
+        physics: BouncingScrollPhysics(),
+        children: <Widget>[
+          ListItemButton(text: S.of(context).state_manage, onTap: (){
+            Navigator.of(context).pushNamed("/stateManage");
+          }),
+          ListItemButton(text: S.of(context).mock, onTap: (){
+            Navigator.of(context).pushNamed("/mockRequest");
+          })
         ],
       ),
     );
   }
 }
+
 
 
 

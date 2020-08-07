@@ -32,6 +32,7 @@ dependencies:
   dio: ^3.0.9
   faker: ^1.2.1
   bot_toast: ^3.0.1
+  shared_preferences: ^0.5.8
   flutter_localizations:
     sdk: flutter
 

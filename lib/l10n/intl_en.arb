@@ -1,5 +1,16 @@
 {
   "app_name": "FlutterCreateFrameWork",
   "home_title": "example",
-  "change_language": "switch the language"
+  "change_language": "switch the language",
+  "state_manage": "State managemen",
+  "mock": "mock request",
+  "username": "Username",
+  "phone": "Phone",
+  "address": "Address",
+  "edit_data": "Modify the data",
+  "username_warning": "Please enter the user name",
+  "phone_warning": "Please enter your cell phone number",
+  "address_warning": "Please enter the address",
+  "email": "Email",
+  "mock_message": "Here, the data is not requested, but after the mock is set up, the data is intercepted and returned"
 }

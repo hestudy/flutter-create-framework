@@ -62,6 +62,116 @@ class S {
       args: [],
     );
   }
+
+  /// `State managemen`
+  String get state_manage {
+    return Intl.message(
+      'State managemen',
+      name: 'state_manage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `mock request`
+  String get mock {
+    return Intl.message(
+      'mock request',
+      name: 'mock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Modify the data`
+  String get edit_data {
+    return Intl.message(
+      'Modify the data',
+      name: 'edit_data',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the user name`
+  String get username_warning {
+    return Intl.message(
+      'Please enter the user name',
+      name: 'username_warning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your cell phone number`
+  String get phone_warning {
+    return Intl.message(
+      'Please enter your cell phone number',
+      name: 'phone_warning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the address`
+  String get address_warning {
+    return Intl.message(
+      'Please enter the address',
+      name: 'address_warning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here, the data is not requested, but after the mock is set up, the data is intercepted and returned`
+  String get mock_message {
+    return Intl.message(
+      'Here, the data is not requested, but after the mock is set up, the data is intercepted and returned',
+      name: 'mock_message',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

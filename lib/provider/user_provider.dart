@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class UserProvider with ChangeNotifier{
 
 //  用户名
-  String _username = '';
+  String _username = 'Test User';
   get username => _username;
 
   void setUserName(String username){
@@ -12,7 +12,7 @@ class UserProvider with ChangeNotifier{
   }
 
 //  手机号
-  String _phone = '';
+  String _phone = '13243737777';
   get phone => _phone;
 
   void setPhone(String phone){
@@ -20,7 +20,7 @@ class UserProvider with ChangeNotifier{
   }
 
 //  地址
-  String _address = '';
+  String _address = 'GuangZhou';
   get address => _address;
 
   void setAddress(String address){

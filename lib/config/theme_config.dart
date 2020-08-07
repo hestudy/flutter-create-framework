@@ -11,6 +11,9 @@ ThemeData ThemeConfig(){
     ),
     scaffoldBackgroundColor: Colors.white,
     highlightColor: Colors.white,
-    splashColor: Colors.white
+    splashColor: Colors.white,
+    inputDecorationTheme: InputDecorationTheme(
+      labelStyle: TextStyle(color: Colors.black)
+    )
   );
 }
