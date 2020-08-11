@@ -1,3 +1,4 @@
+import 'package:flustars/flustars.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocationStrogeUtil{
@@ -6,24 +7,20 @@ class LocationStrogeUtil{
     return await SharedPreferences.getInstance();
   }
 
-  Future<dynamic> get(String key)async{
-    SharedPreferences sharedPreferences = await init();
-    return sharedPreferences.get(key);
+  String get(String key){
+    return SpUtil.getString(key);
   }
 
   Future<bool> set(String key,String value)async{
-    SharedPreferences sharedPreferences = await init();
-    return sharedPreferences.setString(key, value);
+    return await SpUtil.putString(key, value);
   }
 
   Future<bool> remove(String key)async{
-    SharedPreferences sharedPreferences = await init();
-    return sharedPreferences.remove(key);
+    return await SpUtil.remove(key);
   }
 
   Future<bool> clear()async{
-    SharedPreferences sharedPreferences = await init();
-    return sharedPreferences.clear();
+    return await SpUtil.clear();
   }
 
 }

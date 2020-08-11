@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_create_framework/api/user_info_api.dart';
-import 'package:flutter_create_framework/compent/list_item_button.dart';
+import 'package:flutter_create_framework/component/list_item_button.dart';
 import 'package:flutter_create_framework/generated/l10n.dart';
 import 'package:flutter_create_framework/util/location_storge_util.dart';
 
@@ -9,7 +8,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context){
 
     initLanguage()async{
-      String language = await LocationStrogeUtil().get("language");
+      String language = LocationStrogeUtil().get("language");
       if(language==null){
         await LocationStrogeUtil().set("language", "zh");
         S.load(Locale("zh"));

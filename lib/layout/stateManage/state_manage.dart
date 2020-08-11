@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_create_framework/compent/list_item_button.dart';
-import 'package:flutter_create_framework/compent/state_manage_panel.dart';
+import 'package:flutter_create_framework/component/list_item_button.dart';
+import 'package:flutter_create_framework/component/state_manage_panel.dart';
 import 'package:flutter_create_framework/generated/l10n.dart';
 import 'package:flutter_create_framework/provider/user_provider.dart';
 import 'package:provider/provider.dart';

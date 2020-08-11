@@ -11,6 +11,7 @@ class RequestUtil {
         onRequest: (RequestOptions options) async {
           // 在请求被发送之前做一些事情
           Map mockResult = Mock().MockServer(options);
+          // 遍历mock规则
           if(mockResult["match"]){
             return dio.resolve(mockResult["response"]);
           }else{

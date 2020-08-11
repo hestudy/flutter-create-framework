@@ -1,3 +1,4 @@
+import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_create_framework/config/theme_config.dart';
 import 'package:flutter_create_framework/generated/l10n.dart';
@@ -7,7 +8,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:bot_toast/bot_toast.dart';
 
-void main(){
+void main()async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await SpUtil.getInstance();
   runApp(
     MultiProvider(providers: [
       ChangeNotifierProvider(create: (_)=>UserProvider())
