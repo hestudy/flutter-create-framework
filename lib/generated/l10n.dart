@@ -172,6 +172,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Tool library`
+  String get utils {
+    return Intl.message(
+      'Tool library',
+      name: 'utils',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The regular verification`
+  String get regular {
+    return Intl.message(
+      'The regular verification',
+      name: 'regular',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

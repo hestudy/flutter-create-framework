@@ -2,6 +2,7 @@ import 'package:flutter_create_framework/layout/home.dart';
 import 'package:flutter_create_framework/layout/mockRequest/mock_request.dart';
 import 'package:flutter_create_framework/layout/stateManage/edit_state_manage.dart';
 import 'package:flutter_create_framework/layout/stateManage/state_manage.dart';
+import 'package:flutter_create_framework/layout/utilsMangae/utils_manage.dart';
 import 'package:flutter_create_framework/view/change_language_view.dart';
 
 List<Map<String,dynamic>> Routes(){
@@ -25,6 +26,14 @@ List<Map<String,dynamic>> Routes(){
     {
       "path":"/mockRequest",
       "view":MockRequest()
+    },
+    {
+      "path":"/mockRequest",
+      "view":MockRequest()
+    },
+    {
+      "path":"/utilsManage",
+      "view":UtilsManage()
     }
   ];
 }

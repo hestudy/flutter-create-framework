@@ -1,14 +1,25 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_create_framework/mock/mock.dart';
+import 'package:flutter_create_framework/util/logger_util.dart';
 
 class RequestUtil {
   Dio init() {
     Dio dio = Dio();
+    // 设置请求域名
     dio.options.baseUrl = "https://test.hfybbs.vip/api";
+    // 设置超时时间
     dio.options.connectTimeout = 5000;
     dio.options.receiveTimeout = 5000;
     dio.interceptors.add(InterceptorsWrapper(
         onRequest: (RequestOptions options) async {
+          Map optionsMap = {
+            "baseUrl":options.baseUrl,
+            "path":options.path,
+            "method":options.method,
+            "data":options.data,
+            "headers":options.headers,
+          };
+          LoggerUtil.d(optionsMap);
           // 在请求被发送之前做一些事情
           Map mockResult = Mock().MockServer(options);
           // 遍历mock规则
@@ -25,10 +36,12 @@ class RequestUtil {
         },
         onResponse: (Response response) async {
           // 在返回响应数据之前做一些预处理
+          LoggerUtil.d(response.data);
           return response; // continue
         },
         onError: (DioError e) async {
           // 当请求失败时做一些预处理
+          LoggerUtil.e(e);
           return e; //continue
         }
     ));

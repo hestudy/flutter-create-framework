@@ -32,8 +32,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "mock_message" : MessageLookupByLibrary.simpleMessage("此处数据并非请求获取，而是设置了mock后，拦截并返回设置好的数据"),
     "phone" : MessageLookupByLibrary.simpleMessage("手机号"),
     "phone_warning" : MessageLookupByLibrary.simpleMessage("请输入手机号"),
+    "regular" : MessageLookupByLibrary.simpleMessage("正则验证"),
     "state_manage" : MessageLookupByLibrary.simpleMessage("状态管理"),
     "username" : MessageLookupByLibrary.simpleMessage("用户名"),
-    "username_warning" : MessageLookupByLibrary.simpleMessage("请输入用户名")
+    "username_warning" : MessageLookupByLibrary.simpleMessage("请输入用户名"),
+    "utils" : MessageLookupByLibrary.simpleMessage("工具类库")
   };
 }

@@ -32,8 +32,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "mock_message" : MessageLookupByLibrary.simpleMessage("Here, the data is not requested, but after the mock is set up, the data is intercepted and returned"),
     "phone" : MessageLookupByLibrary.simpleMessage("Phone"),
     "phone_warning" : MessageLookupByLibrary.simpleMessage("Please enter your cell phone number"),
+    "regular" : MessageLookupByLibrary.simpleMessage("The regular verification"),
     "state_manage" : MessageLookupByLibrary.simpleMessage("State managemen"),
     "username" : MessageLookupByLibrary.simpleMessage("Username"),
-    "username_warning" : MessageLookupByLibrary.simpleMessage("Please enter the user name")
+    "username_warning" : MessageLookupByLibrary.simpleMessage("Please enter the user name"),
+    "utils" : MessageLookupByLibrary.simpleMessage("Tool library")
   };
 }

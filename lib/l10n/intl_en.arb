@@ -12,5 +12,7 @@
   "phone_warning": "Please enter your cell phone number",
   "address_warning": "Please enter the address",
   "email": "Email",
-  "mock_message": "Here, the data is not requested, but after the mock is set up, the data is intercepted and returned"
+  "mock_message": "Here, the data is not requested, but after the mock is set up, the data is intercepted and returned",
+  "utils": "Tool library",
+  "regular": "The regular verification"
 }
