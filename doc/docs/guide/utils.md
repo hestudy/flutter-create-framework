@@ -169,3 +169,159 @@ List UserInfoRole(){
 
 ## 路由
 
+框架的路由是基于官方的路由进行了简单封装，核心代码位于：`/lib/router/router.dart`
+
+### 新增路由
+
+参考示例文件：`/lib/router/routes.dart`
+
+```dart
+List<Map<String,dynamic>> Routes(){
+  return [
+    {
+      "path":"/",
+      "view":Home(),
+    },
+    {
+      "path":"/changeLanguage",
+      "view":ChangeLanguage(),
+    },
+    {
+      "path":"/stateManage",
+      "view":StateManage()
+    },
+    {
+      "path":"/editStateManage",
+      "view":EditStateManage()
+    },
+    {
+      "path":"/mockRequest",
+      "view":MockRequest()
+    },
+    {
+      "path":"/mockRequest",
+      "view":MockRequest()
+    },
+    {
+      "path":"/utilsManage",
+      "view":UtilsManage()
+    }
+  ];
+}
+```
+
+按格式增加路由即可，后续会考虑增加`嵌套路由`，`路由动画`等功能
+
+### 路由跳转
+
+按照官方的路由方式操作即可
+
+```dart
+// 跳转
+Navigator.of(context).pushNamed("/");
+// 后退
+Navigator.of(context).pop();
+// 替换当前路由
+Navigator.of(context).pushReplacementNamed("/");
+// 跳转路由并删除所有路由
+Navigator.of(context).pushNamedAndRemoveUntil("/", (route) => false);
+```
+
+## 调试打印
+
+基于 [logger](https://pub.flutter-io.cn/packages/logger)库封装了一个调试打印的工具类，可打印`Object`
+
+### 开启调试
+
+位于`/lib/config/server_config.dart`
+
+```dart
+class ServerConfig{
+  //  是否为调试模式，是则打印日志
+  bool Debug(){
+    return true;
+  }
+}
+```
+
+仅作用于使用该工具类的调试输出
+
+### 使用
+
+```dart
+// 调试输出
+LoggerUtil.d(optionsMap);
+```
+
+一般使用调试输出即可
+
+核心代码位于`/lib/util/logger_util.dart`
+
+```dart
+class LoggerUtil{
+  LoggerUtil.v(dynamic v){
+    if(ServerConfig().Debug()){
+      Logger().v(v);
+    }
+  }
+  // 调试
+  LoggerUtil.d(dynamic d){
+    if(ServerConfig().Debug()){
+      Logger().d(d);
+    }
+  }
+  // 信息
+  LoggerUtil.i(dynamic i){
+    if(ServerConfig().Debug()){
+      Logger().i(i);
+    }
+  }
+  // 错误
+  LoggerUtil.e(dynamic e){
+    if(ServerConfig().Debug()){
+      Logger().e(e);
+    }
+  }
+  // 警告
+  LoggerUtil.w(dynamic w){
+    if(ServerConfig().Debug()){
+      Logger().w(w);
+    }
+  }
+  // WTF
+  LoggerUtil.wtf(dynamic wtf){
+    if(ServerConfig().Debug()){
+      Logger().wtf(wtf);
+    }
+  }
+}
+```
+
+## 主题配置
+
+位于`/lib/config/theme_config.dart`
+
+```dart
+//主题配置
+ThemeData ThemeConfig(){
+  return ThemeData(
+    primarySwatch: Colors.blue,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    primaryColor: Colors.white, //主色调
+    appBarTheme: AppBarTheme(
+      elevation: 0 //导航栏阴影
+    ),
+    scaffoldBackgroundColor: Colors.white, //背景颜色
+    highlightColor: Colors.white, //高亮颜色
+    splashColor: Colors.white, //波纹颜色
+    inputDecorationTheme: InputDecorationTheme(
+      labelStyle: TextStyle(color: Colors.black)
+    )
+  );
+}
+```
+
+## 工具集
+
+参考库 [flustars](https://github.com/Sky24n/flustars)
+

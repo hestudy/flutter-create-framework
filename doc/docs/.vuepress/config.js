@@ -52,6 +52,7 @@ module.exports = {
         '/guide/',
         '/guide/directory',
         '/guide/utils',
+        '/guide/about',
     ]
   },
 
