@@ -15,7 +15,7 @@
 # Github(国外仓库)
 git clone https://github.com/1467602180/flutter-create-framework.git
 # Gitee(国内仓库)
-git https://gitee.com/hfybbs/flutter-create-framework.git
+git clone https://gitee.com/hfybbs/flutter-create-framework.git
 ```
 
 
