@@ -192,6 +192,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter a string that you want to validate`
+  String get regexp_hint {
+    return Intl.message(
+      'Please enter a string that you want to validate',
+      name: 'regexp_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify the phone number`
+  String get regexp_phone {
+    return Intl.message(
+      'Verify the phone number',
+      name: 'regexp_phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Validation email`
+  String get regexp_email {
+    return Intl.message(
+      'Validation email',
+      name: 'regexp_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Simple encryption and decryption`
+  String get simple_encry {
+    return Intl.message(
+      'Simple encryption and decryption',
+      name: 'simple_encry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter an encrypted string`
+  String get input_encry {
+    return Intl.message(
+      'Please enter an encrypted string',
+      name: 'input_encry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `encryption`
+  String get encry {
+    return Intl.message(
+      'encryption',
+      name: 'encry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `decryption`
+  String get decry {
+    return Intl.message(
+      'decryption',
+      name: 'decry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Decrypt string`
+  String get input_decry {
+    return Intl.message(
+      'Decrypt string',
+      name: 'input_decry',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

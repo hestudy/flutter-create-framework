@@ -14,5 +14,13 @@
   "email": "Email",
   "mock_message": "Here, the data is not requested, but after the mock is set up, the data is intercepted and returned",
   "utils": "Tool library",
-  "regular": "The regular verification"
+  "regular": "The regular verification",
+  "regexp_hint": "Please enter a string that you want to validate",
+  "regexp_phone": "Verify the phone number",
+  "regexp_email": "Validation email",
+  "simple_encry": "Simple encryption and decryption",
+  "input_encry": "Please enter an encrypted string",
+  "encry": "encryption",
+  "decry": "decryption",
+  "input_decry": "Decrypt string"
 }

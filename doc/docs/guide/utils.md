@@ -297,6 +297,73 @@ class LoggerUtil{
 }
 ```
 
+## 状态管理
+
+基于 [provider](https://pub.flutter-io.cn/packages/provider)库，示例代码位于：`/lib/provider/user_provider.dart`
+
+```dart
+class UserProvider with ChangeNotifier{
+
+//  用户名
+  String _username = 'Test User';
+  get username => _username;
+
+  void setUserName(String username){
+    _username = username;
+    notifyListeners();
+  }
+
+//  手机号
+  String _phone = '13243737777';
+  get phone => _phone;
+
+  void setPhone(String phone){
+    _phone = phone;
+  }
+
+//  地址
+  String _address = 'GuangZhou';
+  get address => _address;
+
+  void setAddress(String address){
+    _address = address;
+  }
+
+}
+```
+
+然后在`/lib/main.dart`中引用
+
+```dart
+void main()async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await SpUtil.getInstance();
+  runApp(
+    MultiProvider(providers: [
+      ChangeNotifierProvider(create: (_)=>UserProvider())
+    ],child: MyApp(),)
+  );
+}
+```
+
+之后便可以在项目中直接使用
+
+```dart
+// 示例方法
+
+//绑定UserProvider中的username
+context.watch<UserProvider>().username
+//调用UserProvider中的setUserName方法
+context.read<UserProvider>().setUserName(username);
+//或者
+Provider.of<UserProvider>(context,listen:false).username;
+Provider.of<UserProvider>(context,listen:false).setUserName(username);
+//最终结果是一致的，差异就是第二种方法不用区分watch和read
+//更多用法你应该去看官方的api文档
+```
+
+
+
 ## 主题配置
 
 位于`/lib/config/theme_config.dart`
@@ -323,5 +390,5 @@ ThemeData ThemeConfig(){
 
 ## 工具集
 
-参考库 [flustars](https://github.com/Sky24n/flustars)
+参考库 [flustars](https://pub.flutter-io.cn/packages/flustars)
 

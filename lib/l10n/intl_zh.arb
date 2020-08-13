@@ -14,5 +14,13 @@
   "email": "邮箱",
   "mock_message": "此处数据并非请求获取，而是设置了mock后，拦截并返回设置好的数据",
   "utils": "工具类库",
-  "regular": "正则验证"
+  "regular": "正则验证",
+  "regexp_hint": "请输入需要验证的字符串",
+  "regexp_phone": "验证手机号",
+  "regexp_email": "验证邮箱",
+  "simple_encry": "简单加解密",
+  "input_encry": "请输入加密字符串",
+  "encry": "加密",
+  "decry": "解密",
+  "input_decry": "解密字符串"
 }

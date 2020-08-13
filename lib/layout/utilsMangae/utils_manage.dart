@@ -12,7 +12,10 @@ class UtilsManage extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         children: <Widget>[
           ListItemButton(text: S.of(context).regular, onTap: (){
-            
+            Navigator.of(context).pushNamed("/regexpValida");
+          }),
+          ListItemButton(text: S.of(context).simple_encry, onTap: (){
+            Navigator.of(context).pushNamed("/simpleEncry");
           }),
         ],
       ),
