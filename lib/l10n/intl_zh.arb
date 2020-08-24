@@ -22,5 +22,8 @@
   "input_encry": "请输入加密字符串",
   "encry": "加密",
   "decry": "解密",
-  "input_decry": "解密字符串"
+  "input_decry": "解密字符串",
+  "bus": "发布订阅事件",
+  "input_send_message": "输入发送信息",
+  "send_event": "发送事件"
 }

@@ -22,5 +22,8 @@
   "input_encry": "Please enter an encrypted string",
   "encry": "encryption",
   "decry": "decryption",
-  "input_decry": "Decrypt string"
+  "input_decry": "Decrypt string",
+  "bus": "Publish subscribe event",
+  "input_send_message": "Input send message",
+  "send_event": "Send the event"
 }

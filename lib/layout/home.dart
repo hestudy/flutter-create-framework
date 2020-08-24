@@ -38,7 +38,10 @@ class Home extends StatelessWidget {
           }),
           ListItemButton(text: S.of(context).utils, onTap: (){
             Navigator.of(context).pushNamed("/utilsManage");
-          })
+          }),
+          ListItemButton(text: S.of(context).bus, onTap: (){
+            Navigator.of(context).pushNamed("/busManage");
+          }),
         ],
       ),
     );

@@ -392,3 +392,40 @@ ThemeData ThemeConfig(){
 
 参考库 [flustars](https://pub.flutter-io.cn/packages/flustars)
 
+## 发布订阅事件流
+
+基于[fbroadcast](https://github.com/Fliggy-Mobile/fbroadcast/blob/master/README_CN.md)库进行了简单的封装而成
+
+封装代码位于：`util/bus_util.dart`
+
+```dart
+class BusUtil{
+//  发送事件封装
+  BusUtil.emit(String name,dynamic data){
+    FBroadcast.instance().broadcast(name,value: data);
+  }
+
+//  注册事件封装
+  BusUtil.on(String name,Function result){
+    FBroadcast.instance().register(name, (value, callback) {
+      result(value,callback);
+    });
+  }
+}
+```
+
+使用示例位于：`layout/busManage/bus_manage.dart`
+
+```dart
+// 发送事件
+BusUtil.emit('send_event', textEditingController.text);
+
+// 接收事件
+BusUtil.on('send_event', (data, callback) {
+	// Toast显示数据
+	BotToast.showText(text: data);
+});
+```
+
+**更多丰富用法查看库[flustars](https://pub.flutter-io.cn/packages/flustars)**
+

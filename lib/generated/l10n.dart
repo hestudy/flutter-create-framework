@@ -272,6 +272,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Publish subscribe event`
+  String get bus {
+    return Intl.message(
+      'Publish subscribe event',
+      name: 'bus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Input send message`
+  String get input_send_message {
+    return Intl.message(
+      'Input send message',
+      name: 'input_send_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send the event`
+  String get send_event {
+    return Intl.message(
+      'Send the event',
+      name: 'send_event',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
