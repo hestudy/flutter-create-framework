@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
 
     initLanguage()async{
       String language = LocationStrogeUtil().get("language");
-      if(language==null){
+      if(language==null||language.isEmpty){
         await LocationStrogeUtil().set("language", "zh");
         S.load(Locale("zh"));
       }else{
@@ -30,6 +30,7 @@ class Home extends StatelessWidget {
       body: ListView(
         physics: BouncingScrollPhysics(),
         children: <Widget>[
+          // 主页示例按钮
           ListItemButton(text: S.of(context).state_manage, onTap: (){
             Navigator.of(context).pushNamed("/stateManage");
           }),

@@ -47,7 +47,7 @@ class _MockRequestState extends State<MockRequest> {
   }
 
   void getData() {
-    UserInfoApi().UserInfo().then((value){
+    UserInfo().then((value){
       setState(() {
         data = value.data["data"];
       });

@@ -48,7 +48,28 @@ List<Map<String,dynamic>> Routes(){
     },
     {
       "path":"/busManage",
-      "view":BusManage()
-    }
+      "view":BusManage(),
+    },
+    //嵌套路由示例
+    // {
+    // 上层路由无需view
+    //   "path":"/busManage",
+    //   "children":[
+    // 匹配规则为"/busManage/demo1"
+    //     {
+    //       "path":"/demo1",
+    //       "view":Demo1()
+    //     },{
+    // 匹配规则为"/busManage/demo2/demo3"
+    //       "path":"/demo2",
+    //       "children":[
+    //         {
+    //           "path":"/demo3",
+    //           "view":Demo3()
+    //         }
+    //       ]
+    //     },
+    //   ]
+    // }
   ];
 }

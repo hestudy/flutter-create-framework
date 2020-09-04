@@ -24,20 +24,18 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_create_framework/util/request_util.dart';
 
-class UserInfoApi{
-  Future<Response> UserInfo()async{
-    return await RequestUtil().init().get("/userinfo");
-  }
+Future<Response> UserInfo()async{
+  return await Request().get("/userinfo");
 }
 ```
 
 然后在业务代码中调用该方法即可，参考示例文件：`/lib/layout/mockRequest/mock_request.dart`
 
 ```dart
-UserInfoApi().UserInfo().then((value){
-  setState(() {
-     data = value.data["data"];
-  });
+UserInfo().then((value){
+    setState(() {
+        data = value.data["data"];
+    });
 });
 ```
 
@@ -210,7 +208,33 @@ List<Map<String,dynamic>> Routes(){
 }
 ```
 
-按格式增加路由即可，后续会考虑增加`嵌套路由`，`路由动画`等功能
+按格式增加路由即可，后续会考虑增加`路由动画`等功能
+
+### 嵌套路由
+
+```dart
+//嵌套路由示例
+{
+    // 上层路由无需view
+    "path":"/busManage",
+    "children":[
+        // 匹配规则为"/busManage/demo1"
+        {
+            "path":"/demo1",
+            "view":Demo1()
+        ,{
+        // 匹配规则为"/busManage/demo2/demo3"
+            "path":"/demo2",
+            "children":[
+                {
+                    "path":"/demo3",
+                    "view":Demo3()
+                }
+            ]
+        },
+    ]
+}
+```
 
 ### 路由跳转
 
