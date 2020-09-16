@@ -302,6 +302,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Custom routing`
+  String get custom_router {
+    return Intl.message(
+      'Custom routing',
+      name: 'custom_router',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Custom routing demonstration interface`
+  String get custom_router_demo {
+    return Intl.message(
+      'Custom routing demonstration interface',
+      name: 'custom_router_demo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Smooth animation route`
+  String get slider_router {
+    return Intl.message(
+      'Smooth animation route',
+      name: 'slider_router',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gradient animation route`
+  String get fade_router {
+    return Intl.message(
+      'Gradient animation route',
+      name: 'fade_router',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zooming animation route`
+  String get scale_router {
+    return Intl.message(
+      'Zooming animation route',
+      name: 'scale_router',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rotation animation route`
+  String get rotation_router {
+    return Intl.message(
+      'Rotation animation route',
+      name: 'rotation_router',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rotate the zooming route animation`
+  String get rotation_scale_router {
+    return Intl.message(
+      'Rotate the zooming route animation',
+      name: 'rotation_scale_router',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

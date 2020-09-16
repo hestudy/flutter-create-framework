@@ -251,6 +251,78 @@ Navigator.of(context).pushReplacementNamed("/");
 Navigator.of(context).pushNamedAndRemoveUntil("/", (route) => false);
 ```
 
+### 自定义路由
+
+封装实现的动画路由，可自定义动画，传参，核心封装代码位于`util/router_util.dart`
+
+#### 使用方法
+
+```dart
+//mode为动画方式，slide：平滑，fade:渐变，scale：缩放，rotation：旋转，rotationScale：旋转缩放，默认为平滑动画
+//argument为传参，下个页面直接使用argument即可
+// 跳转
+RouterUtil.pushNamed(context,"/",mode:'slide',argument:'params');
+// 替换当前路由
+RouterUtil.pushReplacementNamed(context,"/",mode:'slide',argument:'params');
+// 跳转路由并删除所有路由
+RouterUtil.pushNamedAndRemoveUntil(context,"/",mode:'slide',argument:'params');
+```
+
+#### 自定义动画
+
+核心代码在`util/router_util.dart`的`66`行
+
+```dart
+switch (mode) {
+                case 'slide':
+                  routerWidget = SlideTransition(
+                    child: child,
+                    position: Tween<Offset>(
+                            begin: Offset(1.0, 0.0), end: Offset(0.0, 0.0))
+                        .animate(CurvedAnimation(
+                            parent: animation1, curve: Curves.ease)),
+                  );
+                  break;
+                case 'fade':
+                  routerWidget = FadeTransition(
+                    child: child,
+                    opacity: Tween(begin: 0.0, end: 1.0).animate(
+                        CurvedAnimation(
+                            parent: animation1, curve: Curves.linear)),
+                  );
+                  break;
+                case 'scale':
+                  routerWidget = ScaleTransition(
+                    child: child,
+                    scale: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+                        parent: animation1, curve: Curves.linear)),
+                  );
+                  break;
+                case 'rotation':
+                  routerWidget = RotationTransition(
+                    child: child,
+                    turns: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+                        parent: animation1, curve: Curves.linear)),
+                  );
+                  break;
+                case 'rotationScale':
+                  routerWidget = RotationTransition(
+                    child: ScaleTransition(
+                      child: child,
+                      scale: Tween(begin: 0.0, end: 1.0).animate(
+                          CurvedAnimation(
+                              parent: animation1, curve: Curves.linear)),
+                    ),
+                    turns: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+                        parent: animation1, curve: Curves.linear)),
+                  );
+                  break;
+              }
+//需要自定义动画直接在后面添加即可，判断的是mode的值
+```
+
+
+
 ## 调试打印
 
 基于 [logger](https://pub.flutter-io.cn/packages/logger)库封装了一个调试打印的工具类，可打印`Object`

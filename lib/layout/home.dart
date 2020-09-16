@@ -2,22 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:flutter_create_framework/component/list_item_button.dart';
 import 'package:flutter_create_framework/generated/l10n.dart';
 import 'package:flutter_create_framework/util/location_storge_util.dart';
+import 'package:flutter_create_framework/util/router_util.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   @override
-  Widget build(BuildContext context){
+  _HomeState createState() => _HomeState();
+}
 
-    initLanguage()async{
-      String language = LocationStrogeUtil().get("language");
-      if(language==null||language.isEmpty){
-        await LocationStrogeUtil().set("language", "zh");
-        S.load(Locale("zh"));
-      }else{
-        S.load(Locale(language));
-      }
+class _HomeState extends State<Home> {
+
+  initLanguage()async{
+    String language = LocationStrogeUtil().get("language");
+    if(language==null||language.isEmpty){
+      await LocationStrogeUtil().set("language", "zh");
+      S.load(Locale("zh"));
+    }else{
+      S.load(Locale(language));
     }
+  }
 
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
     initLanguage();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).home_title),
@@ -43,11 +55,15 @@ class Home extends StatelessWidget {
           ListItemButton(text: S.of(context).bus, onTap: (){
             Navigator.of(context).pushNamed("/busManage");
           }),
+          ListItemButton(text: S.of(context).custom_router, onTap: (){
+            RouterUtil.pushNamed(context, "/customRouter");
+          }),
         ],
       ),
     );
   }
 }
+
 
 
 

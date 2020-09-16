@@ -25,5 +25,12 @@
   "input_decry": "解密字符串",
   "bus": "发布订阅事件",
   "input_send_message": "输入发送信息",
-  "send_event": "发送事件"
+  "send_event": "发送事件",
+  "custom_router": "自定义路由",
+  "custom_router_demo": "自定义路由演示界面",
+  "slider_router": "平滑动画路由",
+  "fade_router": "渐变动画路由",
+  "scale_router": "缩放动画路由",
+  "rotation_router": "旋转动画路由",
+  "rotation_scale_router": "旋转缩放路由动画"
 }

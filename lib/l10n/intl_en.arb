@@ -25,5 +25,12 @@
   "input_decry": "Decrypt string",
   "bus": "Publish subscribe event",
   "input_send_message": "Input send message",
-  "send_event": "Send the event"
+  "send_event": "Send the event",
+  "custom_router": "Custom routing",
+  "custom_router_demo": "Custom routing demonstration interface",
+  "slider_router": "Smooth animation route",
+  "fade_router": "Gradient animation route",
+  "scale_router": "Zooming animation route",
+  "rotation_router": "Rotation animation route",
+  "rotation_scale_router": "Rotate the zooming route animation"
 }

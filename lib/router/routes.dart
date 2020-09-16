@@ -1,4 +1,6 @@
 import 'package:flutter_create_framework/layout/busManage/bus_manage.dart';
+import 'package:flutter_create_framework/layout/customRouter/custom_router.dart';
+import 'package:flutter_create_framework/layout/customRouter/custom_router_demo.dart';
 import 'package:flutter_create_framework/layout/home.dart';
 import 'package:flutter_create_framework/layout/mockRequest/mock_request.dart';
 import 'package:flutter_create_framework/layout/stateManage/edit_state_manage.dart';
@@ -49,6 +51,14 @@ List<Map<String,dynamic>> Routes(){
     {
       "path":"/busManage",
       "view":BusManage(),
+    },
+    {
+      "path":"/customRouter",
+      "view":CustomRouter(),
+    },
+    {
+      "path":"/customRouterDemo",
+      "view":CustomRouterDemo(),
     },
     //嵌套路由示例
     // {
