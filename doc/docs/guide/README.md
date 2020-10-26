@@ -7,7 +7,17 @@
 
 
 
-## 拉取Template
+你可以选择用简单的Template直接上手开发或者查看完整Template进行学习。
+
+## 拉取简单Template
+
+访问[github模板仓库](https://github.com/1467602180/flutter-create-framework-template)或[gitee模板仓库](https://gitee.com/hfybbs/flutter-create-framework-template)
+
+点击使用该模板，创建你的代码仓库，然后clone下来进行开发
+
+![image-20201026133753345](README.assets/image-20201026133753345.png)
+
+## 拉取完整Template
 
 打开终端，执行代码，将框架代码拉取至你的电脑上
 
