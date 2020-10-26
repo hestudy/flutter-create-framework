@@ -12,7 +12,7 @@ setArgument(dynamic argument) {
 class RouterUtil {
   RouterUtil.pushNamed(BuildContext context, String name,
       {String mode = 'slide', dynamic argument = ''}) {
-    Map<String, Widget Function(BuildContext)> routerList = Router(context);
+    Map<String, Widget Function(BuildContext)> routerList = myRouter(context);
     if (routerList.containsKey(name)) {
       setArgument(argument);
       Navigator.of(context)
@@ -24,7 +24,7 @@ class RouterUtil {
 
   RouterUtil.pushReplacementNamed(BuildContext context, String name,
       {String mode = 'slide', dynamic argument = ''}) {
-    Map<String, Widget Function(BuildContext)> routerList = Router(context);
+    Map<String, Widget Function(BuildContext)> routerList = myRouter(context);
     if (routerList.containsKey(name)) {
       setArgument(argument);
       Navigator.of(context)
@@ -36,7 +36,7 @@ class RouterUtil {
 
   RouterUtil.pushNamedAndRemoveUntil(BuildContext context, String name,
       {String mode = 'slide', dynamic argument = ''}) {
-    Map<String, Widget Function(BuildContext)> routerList = Router(context);
+    Map<String, Widget Function(BuildContext)> routerList = myRouter(context);
     if (routerList.containsKey(name)) {
       setArgument(argument);
       Navigator.of(context).pushAndRemoveUntil(

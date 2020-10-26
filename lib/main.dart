@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       builder: BotToastInit(),
       navigatorObservers: [BotToastNavigatorObserver()],
-      routes: Router(context),
+      routes: myRouter(context),
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,

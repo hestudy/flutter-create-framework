@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_create_framework/router/routes.dart';
 
-Map<String,Widget Function(BuildContext)> Router(BuildContext context){
+Map<String,Widget Function(BuildContext)> myRouter(BuildContext context){
   Map<String,Widget Function(BuildContext)> router = {};
   List<Map<String,dynamic>> screenRoutes = [];
   for(var route in Routes()){
